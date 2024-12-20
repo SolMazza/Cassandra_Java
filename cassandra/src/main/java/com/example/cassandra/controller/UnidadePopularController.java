@@ -6,6 +6,7 @@ import com.example.cassandra.repository.UnidadePopularRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -21,7 +22,10 @@ public class UnidadePopularController {
         return unidadePopularRepository.save(unidadePopular);
     }
 
-
+    @GetMapping
+    public List<UnidadePopular> getAllMovimentos(){
+        return  unidadePopularRepository.findAll();
+    }
     @GetMapping("/{id}")
     public UnidadePopular getUnidadePopularById(@PathVariable UUID id){
         return unidadePopularRepository.findById(id).orElse(null);
