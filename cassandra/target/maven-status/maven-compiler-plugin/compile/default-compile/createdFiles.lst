@@ -1,0 +1,4 @@
+com\example\cassandra\controller\UnidadePopularController.class
+com\example\cassandra\repository\UnidadePopularRepository.class
+com\example\cassandra\view\CassandraApplication.class
+com\example\cassandra\model\UnidadePopular.class

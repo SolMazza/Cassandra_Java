@@ -10,7 +10,6 @@ import java.util.UUID;
 @Table("UnidadePopular")
 public class UnidadePopular {
 
-
     @PrimaryKey
     private UUID id;
 
@@ -19,12 +18,15 @@ public class UnidadePopular {
 
     private Date fundacao;
 
+    public UnidadePopular() {
+    }
 
     public UnidadePopular(String message, Date fundacao) {
         this.id = UUID.randomUUID();
         this.message = message;
         this.fundacao = fundacao;
     }
+
     public UnidadePopular(String message) {
         this.id = UUID.randomUUID();
         this.message = message;
@@ -34,12 +36,15 @@ public class UnidadePopular {
         return id;
     }
 
-    @NonNull
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
     public String getMessage() {
         return message;
     }
 
-    public void setMessage(@NonNull String message) {
+    public void setMessage(String message) {
         this.message = message;
     }
 

@@ -1,7 +1,10 @@
 spring:
-  data:
-   cassandra:
-    contact-points: cassandra
-    port: 9042
-    keyspace-name: unidadePopular
-    schema-action: create-if-not-exists
+ data:
+  cassandra:
+   contact-points: cassandra
+   port: 9042
+   keyspace-name: unidadePopular
+   schema-action: create-if-not-exists
+
+server:
+ port: 8080
